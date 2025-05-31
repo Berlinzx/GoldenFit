@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoldenFit - Centro de Entrenamiento</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fffaf0;
+      color: #333;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 2rem 1rem;
+      text-align: center;
+      color: gold;
+    }
+
+    header img {
+      width: 100px;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      color: #f1c40f;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #d4af37;
+    }
+
+    footer {
+      background-color: #1f1f1f;
+      color: #aaa;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #d4af37;
+      color: #fff;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #c29e2e;
+    }
+
+    .horario-table {
+      width: 100%;
+      margin-top: 1.5rem;
+      border: none;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .horario-table thead {
+      background-color: #d4af37;
+      color: white;
+    }
+
+    .horario-table th, .horario-table td {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .horario-table tbody tr:nth-child(even) {
+      background-color: #fdf7e3;
+    }
+
+    .horario-table tbody tr:nth-child(odd) {
+      background-color: #fffaf0;
+    }
+
+    .horario-table td {
+      font-size: 1.1rem;
+    }
+
+    .disponible {
+      color: green;
+      font-weight: bold;
+    }
+
+    .ocupado {
+      color: red;
+      font-weight: bold;
+    }
+
+    .contact-info {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .contact-info img {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="g.png" alt="GoldenFit logo" />
+    <h1>GoldenFit</h1>
+    <p>Go Old en Fit</p>
+  </header>
+
+  <section>
+    <h2>¿Quiénes somos?</h2>
+    <img src="g.png" alt="GoldenFit logo" style="width:80px; display:block; margin:1rem auto;" />
+    <p>
+      En GoldenFit ofrecemos entrenamientos funcionales diseñados especialmente para la tercera edad. Nuestro objetivo es mejorar la calidad de vida a través del movimiento consciente, seguro y adaptado a cada persona. Promovemos el envejecimiento activo en un ambiente amigable, profesional y motivador.
+    </p>
+  </section>
+
+  <section>
+    <h2>Horario</h2>
+    <p>
+      Nuestras clases se imparten los <strong>lunes, martes, jueves y viernes</strong> en los siguientes horarios:
+    </p>
+    <p>
+      Mañanas: de 8:00 a 12:00h<br/>
+      Tardes: de 16:00 a 20:00h<br/>
+      Cada clase tiene una duración aproximada de 55 minutos.<br/>
+      <strong>Todas las clases tienen un máximo de 6 participantes.</strong>
+    </p>
+    <table class="horario-table">
+      <thead>
+        <tr>
+          <th>Hora</th>
+          <th>Lunes</th>
+          <th>Martes</th>
+          <th>Jueves</th>
+          <th>Viernes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>08:00</td><td class="disponible">Disponible 4/6</td><td class="ocupado">Ocupado</td><td class="disponible">Disponible 3/6</td><td class="disponible">Disponible 5/6</td></tr>
+        <tr><td>09:00</td><td class="disponible">Disponible 2/6</td><td class="disponible">Disponible 6/6</td><td class="ocupado">Ocupado</td><td class="disponible">Disponible 3/6</td></tr>
+        <tr><td>10:00</td><td class="ocupado">Ocupado</td><td class="disponible">Disponible 1/6</td><td class="disponible">Disponible 5/6</td><td class="ocupado">Ocupado</td></tr>
+        <tr><td>11:00</td><td class="disponible">Disponible 4/6</td><td class="disponible">Disponible 2/6</td><td class="ocupado">Ocupado</td><td class="disponible">Disponible 3/6</td></tr>
+        <tr><td>16:00</td><td class="ocupado">Ocupado</td><td class="disponible">Disponible 3/6</td><td class="disponible">Disponible 2/6</td><td class="disponible">Disponible 1/6</td></tr>
+        <tr><td>17:00</td><td class="disponible">Disponible 6/6</td><td class="ocupado">Ocupado</td><td class="disponible">Disponible 4/6</td><td class="disponible">Disponible 2/6</td></tr>
+        <tr><td>18:00</td><td class="disponible">Disponible 5/6</td><td class="disponible">Disponible 2/6</td><td class="ocupado">Ocupado</td><td class="disponible">Disponible 3/6</td></tr>
+        <tr><td>19:00</td><td class="ocupado">Ocupado</td><td class="disponible">Disponible 4/6</td><td class="disponible">Disponible 1/6</td><td class="disponible">Disponible 6/6</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Contacto</h2>
+    <p>¿Tienes preguntas o quieres más información? Contáctanos usando el siguiente formulario:</p>
+    <form>
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="email" placeholder="Tu correo electrónico" required />
+      <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <div class="contact-info">
+      <a href="https://wa.me/34683143232" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp icon">
+      </a>
+      <span>683 14 3232</span>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 GoldenFit. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
